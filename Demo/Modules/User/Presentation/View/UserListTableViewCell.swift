@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class UserListTableViewCell: UITableViewCell {
     
@@ -22,7 +21,9 @@ class UserListTableViewCell: UITableViewCell {
     // Using UserCellViewModel for configuring cell
     var userCellModel : UserCellViewModel? {
         didSet {
-            userImageView?.sd_setImage(with: URL( string: userCellModel?.avatar ?? "" ), completed: nil)
+            if let imageUrl = URL(string: userCellModel?.avatar ?? "") {
+                userImageView.load(url: imageUrl)
+            }
             nameLabel.text = userCellModel?.fullName
             emailLabel.text = userCellModel?.email
         }

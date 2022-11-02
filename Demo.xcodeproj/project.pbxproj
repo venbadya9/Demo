@@ -43,7 +43,6 @@
 		216ECB74290FCC6400998899 /* UserListVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB57290FCC6400998899 /* UserListVC+DataSource.swift */; };
 		216ECB75290FCC6400998899 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB59290FCC6400998899 /* UserListTableViewCell.swift */; };
 		216ECB76290FCC6400998899 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB5B290FCC6400998899 /* DataList.swift */; };
-		216ECB79290FCE5100998899 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 216ECB78290FCE5100998899 /* SDWebImage */; };
 		216ECB7A290FD58300998899 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB11290FC49B00998899 /* MockNetworkManager.swift */; };
 		216ECB7B290FD58700998899 /* MockUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB12290FC49B00998899 /* MockUseCase.swift */; };
 		216ECB7C290FD58A00998899 /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB13290FC49B00998899 /* MockRepository.swift */; };
@@ -121,7 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216ECB79290FCE5100998899 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +456,6 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
-				216ECB78290FCE5100998899 /* SDWebImage */,
 			);
 			productName = Demo;
 			productReference = 216ECAD7290FC45600998899 /* Demo.app */;
@@ -533,7 +530,6 @@
 			);
 			mainGroup = 216ECACE290FC45600998899;
 			packageReferences = (
-				216ECB77290FCE5100998899 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 216ECAD8290FC45600998899 /* Products */;
 			projectDirPath = "";
@@ -956,25 +952,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		216ECB77290FCE5100998899 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		216ECB78290FCE5100998899 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 216ECB77290FCE5100998899 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 216ECACF290FC45600998899 /* Project object */;
 }
