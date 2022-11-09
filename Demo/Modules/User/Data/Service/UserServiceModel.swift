@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol IUserService {
+protocol UserServiceModel {
     func makeNetworkApiCall(completion: @escaping DataResponse)
 }

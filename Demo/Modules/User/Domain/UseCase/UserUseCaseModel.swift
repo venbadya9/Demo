@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol IUserUseCase {
-    func fetchUserList(completion: @escaping DomainResponse)
+protocol UserUseCaseModel {
+    func fetchUserList(completion: @escaping DataResponse)
 }

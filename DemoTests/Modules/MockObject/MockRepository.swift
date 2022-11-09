@@ -7,9 +7,9 @@
 
 import Foundation
 
-class MockRepository: IUserRepository {
+class MockRepository: UserRepositoryModel {
     
-    var userList: UserDomainListDTO?
+    var userList: UserModel?
     var error: Error?
     
     func makeServiceCallToFetchDetails(completion: @escaping DataResponse) {

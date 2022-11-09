@@ -12,7 +12,7 @@ import UIKit
 extension UserListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.users.count ?? 0
+        return viewModel?.users?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -20,7 +20,7 @@ extension UserListVC: UITableViewDelegate, UITableViewDataSource {
             fatalError()
         }
         
-        cell.userCellModel = viewModel?.users[indexPath.row]
+        cell.userCellModel = viewModel?.users?[indexPath.row]
         return cell
     }
     
@@ -30,5 +30,9 @@ extension UserListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.output?.handleNavigation(indexPath.row)
     }
 }

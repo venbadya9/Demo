@@ -7,15 +7,15 @@
 
 import Foundation
 
-class MockService: IUserService {
+class MockService: UserServiceModel {
     
-    var userList: UserDataListDTO?
+    var userList: UserModel?
     var error: Error?
     
     func makeNetworkApiCall(completion: @escaping DataResponse) {
         
         if let userList = userList {
-            completion(.success(userList.toDomain()))
+            completion(.success(userList))
         } else if let _ = error {
             completion(.failure(NetworkError.failed))
         }

@@ -29,25 +29,25 @@
 		216ECB66290FCC6400998899 /* UserContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB3F290FCC6400998899 /* UserContainer.swift */; };
 		216ECB67290FCC6400998899 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB41290FCC6400998899 /* Constant.swift */; };
 		216ECB68290FCC6400998899 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB43290FCC6400998899 /* UserRepository.swift */; };
-		216ECB69290FCC6400998899 /* IUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB44290FCC6400998899 /* IUserRepository.swift */; };
+		216ECB69290FCC6400998899 /* UserRepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB44290FCC6400998899 /* UserRepositoryModel.swift */; };
 		216ECB6A290FCC6400998899 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB46290FCC6400998899 /* UserService.swift */; };
-		216ECB6B290FCC6400998899 /* IUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB47290FCC6400998899 /* IUserService.swift */; };
-		216ECB6C290FCC6400998899 /* UserDataListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB49290FCC6400998899 /* UserDataListDTO.swift */; };
+		216ECB6B290FCC6400998899 /* UserServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB47290FCC6400998899 /* UserServiceModel.swift */; };
+		216ECB6C290FCC6400998899 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB49290FCC6400998899 /* UserModel.swift */; };
 		216ECB6D290FCC6400998899 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB4C290FCC6400998899 /* UserUseCase.swift */; };
-		216ECB6E290FCC6400998899 /* IUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB4D290FCC6400998899 /* IUserUseCase.swift */; };
-		216ECB6F290FCC6400998899 /* UserDomainListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB4F290FCC6400998899 /* UserDomainListDTO.swift */; };
-		216ECB70290FCC6400998899 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB52290FCC6400998899 /* UserViewModel.swift */; };
-		216ECB71290FCC6400998899 /* IUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB53290FCC6400998899 /* IUserViewModel.swift */; };
+		216ECB6E290FCC6400998899 /* UserUseCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB4D290FCC6400998899 /* UserUseCaseModel.swift */; };
+		216ECB70290FCC6400998899 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB52290FCC6400998899 /* UserListViewModel.swift */; };
+		216ECB71290FCC6400998899 /* UserViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB53290FCC6400998899 /* UserViewDataModel.swift */; };
 		216ECB72290FCC6400998899 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB54290FCC6400998899 /* UserCellViewModel.swift */; };
 		216ECB73290FCC6400998899 /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB56290FCC6400998899 /* UserListVC.swift */; };
 		216ECB74290FCC6400998899 /* UserListVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB57290FCC6400998899 /* UserListVC+DataSource.swift */; };
 		216ECB75290FCC6400998899 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB59290FCC6400998899 /* UserListTableViewCell.swift */; };
-		216ECB76290FCC6400998899 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB5B290FCC6400998899 /* DataList.swift */; };
 		216ECB7A290FD58300998899 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB11290FC49B00998899 /* MockNetworkManager.swift */; };
 		216ECB7B290FD58700998899 /* MockUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB12290FC49B00998899 /* MockUseCase.swift */; };
 		216ECB7C290FD58A00998899 /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB13290FC49B00998899 /* MockRepository.swift */; };
 		216ECB7E290FD59000998899 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB15290FC49B00998899 /* MockService.swift */; };
 		216ECB80290FD5DC00998899 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB14290FC49B00998899 /* MockData.swift */; };
+		216ECB82291C046500998899 /* UserListDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB81291C046500998899 /* UserListDetailVC.swift */; };
+		216ECB84291C068000998899 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216ECB83291C068000998899 /* UserDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,20 +99,20 @@
 		216ECB3F290FCC6400998899 /* UserContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserContainer.swift; sourceTree = "<group>"; };
 		216ECB41290FCC6400998899 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		216ECB43290FCC6400998899 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
-		216ECB44290FCC6400998899 /* IUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUserRepository.swift; sourceTree = "<group>"; };
+		216ECB44290FCC6400998899 /* UserRepositoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepositoryModel.swift; sourceTree = "<group>"; };
 		216ECB46290FCC6400998899 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		216ECB47290FCC6400998899 /* IUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUserService.swift; sourceTree = "<group>"; };
-		216ECB49290FCC6400998899 /* UserDataListDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataListDTO.swift; sourceTree = "<group>"; };
+		216ECB47290FCC6400998899 /* UserServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserServiceModel.swift; sourceTree = "<group>"; };
+		216ECB49290FCC6400998899 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		216ECB4C290FCC6400998899 /* UserUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
-		216ECB4D290FCC6400998899 /* IUserUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUserUseCase.swift; sourceTree = "<group>"; };
-		216ECB4F290FCC6400998899 /* UserDomainListDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDomainListDTO.swift; sourceTree = "<group>"; };
-		216ECB52290FCC6400998899 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		216ECB53290FCC6400998899 /* IUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUserViewModel.swift; sourceTree = "<group>"; };
+		216ECB4D290FCC6400998899 /* UserUseCaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUseCaseModel.swift; sourceTree = "<group>"; };
+		216ECB52290FCC6400998899 /* UserListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		216ECB53290FCC6400998899 /* UserViewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewDataModel.swift; sourceTree = "<group>"; };
 		216ECB54290FCC6400998899 /* UserCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		216ECB56290FCC6400998899 /* UserListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 		216ECB57290FCC6400998899 /* UserListVC+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserListVC+DataSource.swift"; sourceTree = "<group>"; };
 		216ECB59290FCC6400998899 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
-		216ECB5B290FCC6400998899 /* DataList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
+		216ECB81291C046500998899 /* UserListDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDetailVC.swift; sourceTree = "<group>"; };
+		216ECB83291C068000998899 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,7 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				216ECB43290FCC6400998899 /* UserRepository.swift */,
-				216ECB44290FCC6400998899 /* IUserRepository.swift */,
+				216ECB44290FCC6400998899 /* UserRepositoryModel.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				216ECB46290FCC6400998899 /* UserService.swift */,
-				216ECB47290FCC6400998899 /* IUserService.swift */,
+				216ECB47290FCC6400998899 /* UserServiceModel.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -362,7 +362,7 @@
 		216ECB48290FCC6400998899 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				216ECB49290FCC6400998899 /* UserDataListDTO.swift */,
+				216ECB49290FCC6400998899 /* UserModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -371,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				216ECB4B290FCC6400998899 /* UseCase */,
-				216ECB4E290FCC6400998899 /* Entities */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -380,17 +379,9 @@
 			isa = PBXGroup;
 			children = (
 				216ECB4C290FCC6400998899 /* UserUseCase.swift */,
-				216ECB4D290FCC6400998899 /* IUserUseCase.swift */,
+				216ECB4D290FCC6400998899 /* UserUseCaseModel.swift */,
 			);
 			path = UseCase;
-			sourceTree = "<group>";
-		};
-		216ECB4E290FCC6400998899 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				216ECB4F290FCC6400998899 /* UserDomainListDTO.swift */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		216ECB50290FCC6400998899 /* Presentation */ = {
@@ -399,7 +390,6 @@
 				216ECB51290FCC6400998899 /* ViewModel */,
 				216ECB55290FCC6400998899 /* Controller */,
 				216ECB58290FCC6400998899 /* View */,
-				216ECB5A290FCC6400998899 /* Entities */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -407,9 +397,10 @@
 		216ECB51290FCC6400998899 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				216ECB52290FCC6400998899 /* UserViewModel.swift */,
-				216ECB53290FCC6400998899 /* IUserViewModel.swift */,
-				216ECB54290FCC6400998899 /* UserCellViewModel.swift */,
+				216ECB85291C068700998899 /* CellModel */,
+				216ECB52290FCC6400998899 /* UserListViewModel.swift */,
+				216ECB53290FCC6400998899 /* UserViewDataModel.swift */,
+				216ECB83291C068000998899 /* UserDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -419,6 +410,7 @@
 			children = (
 				216ECB56290FCC6400998899 /* UserListVC.swift */,
 				216ECB57290FCC6400998899 /* UserListVC+DataSource.swift */,
+				216ECB81291C046500998899 /* UserListDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -431,12 +423,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		216ECB5A290FCC6400998899 /* Entities */ = {
+		216ECB85291C068700998899 /* CellModel */ = {
 			isa = PBXGroup;
 			children = (
-				216ECB5B290FCC6400998899 /* DataList.swift */,
+				216ECB54290FCC6400998899 /* UserCellViewModel.swift */,
 			);
-			path = Entities;
+			path = CellModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,33 +569,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				216ECB72290FCC6400998899 /* UserCellViewModel.swift in Sources */,
-				216ECB69290FCC6400998899 /* IUserRepository.swift in Sources */,
+				216ECB69290FCC6400998899 /* UserRepositoryModel.swift in Sources */,
+				216ECB84291C068000998899 /* UserDetailViewModel.swift in Sources */,
 				216ECB63290FCC6400998899 /* AppDIContainer.swift in Sources */,
 				216ECB62290FCC6400998899 /* Extension.swift in Sources */,
 				216ECB68290FCC6400998899 /* UserRepository.swift in Sources */,
 				216ECB80290FD5DC00998899 /* MockData.swift in Sources */,
 				216ECB66290FCC6400998899 /* UserContainer.swift in Sources */,
-				216ECB6E290FCC6400998899 /* IUserUseCase.swift in Sources */,
+				216ECB6E290FCC6400998899 /* UserUseCaseModel.swift in Sources */,
 				216ECB73290FCC6400998899 /* UserListVC.swift in Sources */,
 				216ECB67290FCC6400998899 /* Constant.swift in Sources */,
 				216ECB6A290FCC6400998899 /* UserService.swift in Sources */,
 				216ECB5C290FCC6400998899 /* NetworkManager.swift in Sources */,
 				216ECB7C290FD58A00998899 /* MockRepository.swift in Sources */,
+				216ECB82291C046500998899 /* UserListDetailVC.swift in Sources */,
 				216ECB6D290FCC6400998899 /* UserUseCase.swift in Sources */,
 				216ECB7B290FD58700998899 /* MockUseCase.swift in Sources */,
 				216ECB64290FCC6400998899 /* AppDelegate.swift in Sources */,
-				216ECB71290FCC6400998899 /* IUserViewModel.swift in Sources */,
+				216ECB71290FCC6400998899 /* UserViewDataModel.swift in Sources */,
 				216ECB75290FCC6400998899 /* UserListTableViewCell.swift in Sources */,
 				216ECB5D290FCC6400998899 /* NetworkError.swift in Sources */,
-				216ECB6F290FCC6400998899 /* UserDomainListDTO.swift in Sources */,
 				216ECB74290FCC6400998899 /* UserListVC+DataSource.swift in Sources */,
 				216ECB7A290FD58300998899 /* MockNetworkManager.swift in Sources */,
-				216ECB6B290FCC6400998899 /* IUserService.swift in Sources */,
+				216ECB6B290FCC6400998899 /* UserServiceModel.swift in Sources */,
 				216ECB7E290FD59000998899 /* MockService.swift in Sources */,
-				216ECB70290FCC6400998899 /* UserViewModel.swift in Sources */,
+				216ECB70290FCC6400998899 /* UserListViewModel.swift in Sources */,
 				216ECB65290FCC6400998899 /* SceneDelegate.swift in Sources */,
-				216ECB6C290FCC6400998899 /* UserDataListDTO.swift in Sources */,
-				216ECB76290FCC6400998899 /* DataList.swift in Sources */,
+				216ECB6C290FCC6400998899 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,33 +7,35 @@
 
 import Foundation
 
-class UserViewModel: IUserViewModel {
+class UserListViewModel: UserViewDataModel {
     
     // MARK: Variables
     
     var output: CallbackStatus?
-    var users: [UserCellViewModel] = [UserCellViewModel]()
+    var users: [UserCellViewModel]? = [UserCellViewModel]()
+    var userModel: UserModel?
     
     // MARK: Private Variables
     
-    private let useCase: IUserUseCase
+    private let useCase: UserUseCaseModel
     
     // MARK: Object Lifecycle
     
-    init(useCase: IUserUseCase) {
+    init(useCase: UserUseCaseModel) {
         self.useCase = useCase
     }
     
     // MARK: Protocol Functions
     
-    func fetchUsers() {
+    func fetchDetails() {
         
         self.useCase.fetchUserList { [weak self] result in
             switch result {
             case let .success(userList):
-                    let users = userList.data
-                    self?.users = self?.processFetchedUsers(users) ?? []
-                    self?.output?.handleSuccess()
+                self?.userModel = userList
+                let users = userList.data
+                self?.users = self?.processFetchedUsers(users) ?? []
+                self?.output?.handleSuccess(nil)
             case let .failure(error):
                 self?.output?.handleFailure(error.localizedDescription)
             }
@@ -42,7 +44,7 @@ class UserViewModel: IUserViewModel {
     
     // MARK: Methods
     
-    func processFetchedUsers(_ users: [UserList.User]) -> [UserCellViewModel] {
+    func processFetchedUsers(_ users: [UserModel.User]) -> [UserCellViewModel] {
         var userCellViewModel = [UserCellViewModel]()
         for user in users {
             userCellViewModel.append(generateCellViewModel(user))
@@ -50,7 +52,7 @@ class UserViewModel: IUserViewModel {
         return userCellViewModel
     }
     
-    func generateCellViewModel(_ user: UserList.User) -> UserCellViewModel {
+    func generateCellViewModel(_ user: UserModel.User) -> UserCellViewModel {
         return UserCellViewModel(
             user.email,
             user.firstName,

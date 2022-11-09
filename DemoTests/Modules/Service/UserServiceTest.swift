@@ -26,7 +26,7 @@ class UserServiceTest: XCTestCase {
         let expecatation = expectation(description: "Success")
         networkManager.userList = UserDataListMockData.userDataList
         
-        networkManager.request(fromUrl: UserAPIEndpoints.userEndpoint) { (result: Result<UserDataListDTO, Error>) in
+        networkManager.request(fromUrl: UserAPIEndpoints.userEndpoint) { (result: Result<UserModel, Error>) in
             switch result {
             case let .success(userList):
                 let users = userList.data
@@ -44,7 +44,7 @@ class UserServiceTest: XCTestCase {
         let expecatation = expectation(description: "Failure")
         networkManager.error = NSError(domain: "Failed", code: 0)
         
-        networkManager.request(fromUrl: UserAPIEndpoints.userEndpoint) { (result: Result<UserDataListDTO, Error>) in
+        networkManager.request(fromUrl: UserAPIEndpoints.userEndpoint) { (result: Result<UserModel, Error>) in
             switch result {
             case .success(_):
                 XCTFail("Success not expected")

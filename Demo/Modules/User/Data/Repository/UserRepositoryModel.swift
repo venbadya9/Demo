@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol IUserRepository {
+protocol UserRepositoryModel {
     func makeServiceCallToFetchDetails(completion: @escaping DataResponse)
 }

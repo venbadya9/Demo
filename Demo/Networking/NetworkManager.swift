@@ -8,14 +8,13 @@
 import Foundation
 
 typealias Response<T: Decodable> = (Result<T, Error>) -> Void
-typealias DataResponse = (Result<UserDomainListDTO, Error>) -> Void
-typealias DomainResponse = (Result<UserList, Error>) -> Void
+typealias DataResponse = (Result<UserModel, Error>) -> Void
 
-protocol INetworkManager {
+protocol NetworkManagerModel {
     func request<T: Decodable>(fromUrl url: URL, completion: @escaping Response<T>)
 }
 
-class NetworkManager: INetworkManager {
+class NetworkManager: NetworkManagerModel {
     
     private let session: URLSession
     

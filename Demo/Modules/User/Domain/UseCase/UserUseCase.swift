@@ -7,26 +7,19 @@
 
 import Foundation
 
-class UserUseCase: IUserUseCase {
+class UserUseCase: UserUseCaseModel {
     
     // MARK: Private Variables
     
-    private let respository: IUserRepository
+    private let repository: UserRepositoryModel
     
-    init(respository: IUserRepository) {
-        self.respository = respository
+    init(repository: UserRepositoryModel) {
+        self.repository = repository
     }
 
     // MARK: Protocol Functions
     
-    func fetchUserList(completion: @escaping DomainResponse) {
-        return self.respository.makeServiceCallToFetchDetails { (result: Result<UserDomainListDTO, Error>) in
-            switch result {
-            case .success(let users):
-                completion(.success(users.toPresentation()))
-            case .failure(_):
-                completion(.failure(NetworkError.failed))
-            }
-        }
+    func fetchUserList(completion: @escaping DataResponse) {
+        return self.repository.makeServiceCallToFetchDetails(completion: completion)
     }
 }

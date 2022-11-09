@@ -7,13 +7,13 @@
 
 import Foundation
 
-class UserRepository: IUserRepository {
+class UserRepository: UserRepositoryModel {
     
     // MARK: Private Variables
     
-    private let service: IUserService
+    private let service: UserServiceModel
     
-    init(service: IUserService) {
+    init(service: UserServiceModel) {
         self.service = service
     }
     

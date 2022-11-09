@@ -14,7 +14,7 @@ class UserUseCaseTest: XCTestCase {
     let repository = MockRepository()
     
     override func setUpWithError() throws {
-        useCase = UserUseCase(respository: repository)
+        useCase = UserUseCase(repository: repository)
     }
     
     override func tearDown() {
@@ -24,7 +24,7 @@ class UserUseCaseTest: XCTestCase {
     
     func testSuccessScenario() {
         let expecatation = expectation(description: "Success")
-        repository.userList = UserDomainListMockData.userDomainList
+        repository.userList = UserDataListMockData.userDataList
         
         useCase.fetchUserList { result in
             switch result {

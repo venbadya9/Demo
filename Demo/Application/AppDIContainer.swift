@@ -10,7 +10,7 @@ import UIKit
 
 class AppDIContainer {
     
-    var networkManager: INetworkManager = {
+    var networkManager: NetworkManagerModel = {
         let networkManager = NetworkManager()
         return networkManager
     }()
@@ -23,5 +23,6 @@ class AppDIContainer {
             window?.makeKeyAndVisible()
         }
     }
+    
 }
 

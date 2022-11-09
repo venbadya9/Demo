@@ -9,3 +9,4 @@
 "user_cell" = "userCell";
 "alert" = "Alert";
 "ok" = "Ok";
+"url_error" = "Could load specified url";

@@ -27,7 +27,7 @@ class UserViewModelTest: XCTestCase {
     
     func testSuccessScenario() {
         expecatation = expectation(description: "Success")
-        useCase.userList = UserListMockData.userList
+        useCase.userList = UserDataListMockData.userDataList
         
         useCase.fetchUserList { result in
             switch result {
@@ -61,7 +61,7 @@ class UserViewModelTest: XCTestCase {
     func testCellViewModel() {
         expecatation = expectation(description: "Loaded CellViewModel")
         var users: [UserCellViewModel] = [UserCellViewModel]()
-        users =  self.viewModel.processFetchedUsers(UserListMockData.userList.data)
+        users =  self.viewModel.processFetchedUsers([UserDataListMockData.userData])
         if users.count > 0 {
             expecatation.fulfill()
         }

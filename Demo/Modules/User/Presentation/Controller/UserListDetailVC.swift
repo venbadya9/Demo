@@ -1,21 +1,23 @@
 //
-//  ViewController.swift
+//  UserListDetailVC.swift
 //  Demo
 //
-//  Created by Venkatesh Badya on 28/10/22.
+//  Created by Venkatesh Badya on 09/11/22.
 //
 
 import UIKit
+import WebKit
 
-class UserListVC: UIViewController {
-    
+class UserDetailVC: UIViewController {
+
     // MARK: IBOutlets
 
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var webView: WKWebView!
+    @IBOutlet private weak var name: UILabel!
     
     // MARK: Variables
     
-    var viewModel: UserViewDataModel?
+    var viewModel: UserDetailViewModel?
         
     // MARK: Object Lifecycle
     
@@ -26,11 +28,20 @@ class UserListVC: UIViewController {
     }
 }
 
-extension UserListVC: CallbackStatus {
+extension UserDetailVC: CallbackStatus {
     
     func handleSuccess(_ url: URL?) {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        if let loadUrl = url {
+            let urlReq = URLRequest(url: loadUrl)
+            
+            if let user = viewModel?.userModel?.data[viewModel?.index ?? 0] {
+                let name = user.firstName + " " + user.lastName
+                
+                DispatchQueue.main.async {
+                    self.name.text = name
+                    self.webView.load(urlReq)
+                }
+            }
         }
     }
     
@@ -41,15 +52,4 @@ extension UserListVC: CallbackStatus {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    func handleNavigation(_ index: Int?) {
-        let detailModule = UserDetailModule()
-        if let userModel = self.viewModel?.userModel,
-           let viewController = detailModule.generateDetailViewController(userModel, index ?? 0) as? UserDetailVC {
-            self.navigationController?.pushViewController(viewController, animated: false)
-        }
-    }
 }
-
-
-

@@ -35,7 +35,7 @@ class NetworkClientTests: XCTestCase {
             return (response, data)
         }
         
-        service.request(fromUrl: testUrl) {  (result: Result<UserDataListDTO, Error>) in
+        service.request(fromUrl: testUrl) {  (result: Result<UserModel, Error>) in
             switch result {
             case let .success(userList):
                 let users = userList.data
@@ -60,7 +60,7 @@ class NetworkClientTests: XCTestCase {
             return (response, data)
         }
         
-        service.request(fromUrl: testUrl) { (result: Result<UserDataListDTO, Error>) in
+        service.request(fromUrl: testUrl) { (result: Result<UserModel, Error>) in
             switch result {
             case .success(_):
                 XCTFail("Success response was not expected.")

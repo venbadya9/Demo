@@ -7,24 +7,17 @@
 
 import Foundation
 
-class UserService: IUserService {
+class UserService: UserServiceModel {
     
     // MARK: Private Variables
     
-    private let networkManager: INetworkManager
+    private let networkManager: NetworkManagerModel
     
-    init(networkManager: INetworkManager) {
+    init(networkManager: NetworkManagerModel) {
         self.networkManager = networkManager
     }
     
-    func makeNetworkApiCall(completion: @escaping DataResponse) {
-        self.networkManager.request(fromUrl: UserAPIEndpoints.userEndpoint) { (result: Result<UserDataListDTO, Error>) in
-            switch result {
-            case .success(let users):
-                completion(.success(users.toDomain()))
-            case .failure(_):
-                completion(.failure(NetworkError.failed))
-            }
-        }
+    func makeNetworkApiCall(completion: @escaping DataResponse) { 
+        self.networkManager.request(fromUrl: UserAPIEndpoints.userEndpoint, completion: completion)
     }
 }

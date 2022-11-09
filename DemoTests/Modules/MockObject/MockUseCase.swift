@@ -7,12 +7,12 @@
 
 import Foundation
 
-class MockUseCase: IUserUseCase {
+class MockUseCase: UserUseCaseModel {
     
-    var userList: UserList?
+    var userList: UserModel?
     var error: Error?
     
-    func fetchUserList(completion: @escaping DomainResponse) {
+    func fetchUserList(completion: @escaping DataResponse) {
         
         if let userList = userList {
             completion(.success(userList))

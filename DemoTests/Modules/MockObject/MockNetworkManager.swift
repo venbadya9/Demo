@@ -7,9 +7,9 @@
 
 import Foundation
 
-class MockNetworkManager: INetworkManager {
+class MockNetworkManager: NetworkManagerModel {
     
-    var userList: UserDataListDTO?
+    var userList: UserModel?
     var error: Error?
     
     func request<T>(fromUrl url: URL, completion: @escaping Response<T>) where T : Decodable {
